@@ -1,6 +1,7 @@
 let haveEvents = 'GamepadEvent' in window;
 let haveWebkitEvents = 'WebKitGamepadEvent' in window;
 let controllers = {};
+const audio = document.getElementById("AudioButton");
 
 var rAF =
   window.mozRequestAnimationFrame ||
@@ -38,6 +39,9 @@ function updateStatus() {
     for (let i=0; i<controller.buttons.length; i++) {
       if (buttonPressed(controller.buttons[i])) {
         $("#" + map[i]).attr("r", 7);
+        if (sound) {
+          // audio.play();
+        }
         if(debug) {
           console.log(i);
         }

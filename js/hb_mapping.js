@@ -1,5 +1,6 @@
 var map = {};
-var debug = false;
+var debug = true;
+var sound = true;
 
 /**
  * My personal mapping of the inputs. If yours isn't the same, set "debug" to true,
